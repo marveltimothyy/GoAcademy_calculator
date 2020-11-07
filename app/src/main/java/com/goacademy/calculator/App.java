@@ -3,6 +3,8 @@
  */
 package com.goacademy.calculator;
 
+import java.util.Scanner;
+
 public class App {
     double INITIAL_STATE = 0 ;
     public double cancleCommand() {
@@ -24,6 +26,33 @@ public class App {
             return this.INITIAL_STATE /= insertedNumber ;
     }
     public static void main(String[] args) {
-
+        App calculator = new App();
+        Scanner scanner = new Scanner(System.in);
+        String [] splitInput;
+        String input, command;
+        int insertedNumber;
+        do{
+            input = scanner.nextLine().toLowerCase();
+            splitInput = input.split(" ");
+            command = splitInput[0];
+            if(!command.equals("exit")){
+                if(splitInput.length == 2){
+                    insertedNumber = Integer.parseInt(input.split(" ")[1]);
+                    if (command.equals("add")) {
+                        calculator.addCommand(insertedNumber);
+                    } else if (command.equals("substract")) {
+                        calculator.substractCommand(insertedNumber);
+                    } else if (command.equals("multiply")) {
+                        calculator.multiplyCommand(insertedNumber);
+                    } else if (command.equals("divide")) {
+                        calculator.divideCommand(insertedNumber);
+                    }
+                }   else if(command.equals(("cancle"))){
+                    calculator.cancleCommand();
+                }
+            }
+            System.out.printf("%,.1f%n",calculator.INITIAL_STATE);
+        }while(!input.equals("exit"));
     }
 }
+
