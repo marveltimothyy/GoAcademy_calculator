@@ -14,4 +14,7 @@ public class AppTest {
     @Test public void givenCalculatorAddNumberShouldReturnNumber() {
         assertEquals(2.01, classUnderTest.addCommand(2), 0.01);
     }
+    @Test public void givenCalculatorSusbtractNumberShouldReturnNumber() {
+        assertEquals(-2.01, classUnderTest.substractCommand(2), 0.01);
+    }
 }
