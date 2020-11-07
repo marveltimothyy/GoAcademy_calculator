@@ -14,6 +14,9 @@ public class App {
     public double substractCommand(int insertedNumber) {
         return this.INITIAL_STATE -= insertedNumber ;
     }
+    public double multiplyCommand(int insertedNumber) {
+        return this.INITIAL_STATE *= insertedNumber ;
+    }
     public static void main(String[] args) {
 
     }
