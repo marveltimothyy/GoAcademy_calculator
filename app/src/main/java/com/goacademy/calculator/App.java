@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class App {
     double INITIAL_STATE = 0 ;
-    public double cancleCommand() {
+    public double cancelCommand() {
         return this.INITIAL_STATE = 0 ;
     }
     public double addCommand(int insertedNumber) {
@@ -47,8 +47,8 @@ public class App {
                     } else if (command.equals("divide")) {
                         calculator.divideCommand(insertedNumber);
                     }
-                }   else if(command.equals(("cancle"))){
-                    calculator.cancleCommand();
+                }   else if(command.equals(("cancel"))){
+                    calculator.cancelCommand();
                 }
             }
             System.out.printf("%,.1f%n",calculator.INITIAL_STATE);

@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class AppTest {
     App classUnderTest = new App();
     @Test public void givenCalculatorShouldReturnZeroInitialNumber() {
-        assertEquals(0.01, classUnderTest.cancleCommand(), 0.01);
+        assertEquals(0.01, classUnderTest.cancelCommand(), 0.01);
     }
     @Test public void givenCalculatorAddNumberShouldReturnNumber() {
         assertEquals(2.01, classUnderTest.addCommand(2), 0.01);
