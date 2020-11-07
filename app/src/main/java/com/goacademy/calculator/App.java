@@ -17,6 +17,12 @@ public class App {
     public double multiplyCommand(int insertedNumber) {
         return this.INITIAL_STATE *= insertedNumber ;
     }
+    public double divideCommand(int insertedNumber) {
+        if(insertedNumber == 0)
+            return this.INITIAL_STATE = 0 ;
+        else
+            return this.INITIAL_STATE /= insertedNumber ;
+    }
     public static void main(String[] args) {
 
     }

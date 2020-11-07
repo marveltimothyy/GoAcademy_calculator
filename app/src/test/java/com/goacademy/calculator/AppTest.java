@@ -20,4 +20,11 @@ public class AppTest {
     @Test public void givenCalculatorMultiplyNumberShouldReturnNumber() {
         assertEquals(0.01, classUnderTest.multiplyCommand(1), 0.01);
     }
+    @Test public void givenCalculatorDivideNumberShouldReturnNumber() {
+        classUnderTest.INITIAL_STATE = 4;
+        assertEquals(2.01, classUnderTest.divideCommand(2), 0.01);
+    }
+    @Test public void givenCalculatorDivideZeroNumberShouldReturnZero() {
+        assertEquals(0.01, classUnderTest.divideCommand(0), 0.01);
+    }
 }
