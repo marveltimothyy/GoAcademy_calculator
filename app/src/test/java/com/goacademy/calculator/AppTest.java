@@ -7,5 +7,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest {
-
+    App classUnderTest = new App();
+    @Test public void givenCalculatorShouldReturnZeroInitialNumber() {
+        assertEquals(0.01, classUnderTest.cancleCommand(), 0.01);
+    }
 }

@@ -4,7 +4,10 @@
 package com.goacademy.calculator;
 
 public class App {
-
+    double INITIAL_STATE = 0 ;
+    public double cancleCommand() {
+        return this.INITIAL_STATE = 0 ;
+    }
 
     public static void main(String[] args) {
 
